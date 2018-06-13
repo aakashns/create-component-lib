@@ -2,9 +2,11 @@
 
 Create a library of React components that can be published to npm.
 
+**Notes:**
 - Uses `create-react-app` under the hood.
 - Inspired from [this blog post](https://hackernoon.com/creating-a-library-of-react-components-using-create-react-app-without-ejecting-d182df690c6b).
-- Currenlty tested only on Linux and Mac
+- Currenlty tested only on Linux and Mac. 
+- It's really just a [shell script](./create-component-lib). Contributions welcome!
 
 ## Usage
 
