@@ -1,0 +1,23 @@
+{
+  "name": "create-component-lib",
+  "version": "0.1.0",
+  "description": "Create a library of React components that can be published to npm",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aakashns/create-component-lib.git"
+  },
+  "keywords": [
+    "react",
+    "component-library"
+  ],
+  "author": "Aakash N S",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aakashns/create-component-lib/issues"
+  },
+  "homepage": "https://github.com/aakashns/create-component-lib#readme"
+}

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Check argument
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: not enough arguments!"
+  exit 2
+fi
+
+# Check 
+if [ -d "$1" ]; then
+  echo "$0: '$1' already exists!"
+  exit 2
+fi
+
+# Initialize the project
+npx create-react-app $1
+cd $1
+
+# Generate the template
+rm src/*
+cd src 
+curl -o index.js https://gist.githubusercontent.com/aakashns/936310e325c1584b41cf7ffd0b65b0bb/raw/4e9d5a707b02f00b1137bd2f10296a24d57b712a/index.js
+mkdir lib
+cd lib
+curl -o TextInput.js https://gist.githubusercontent.com/aakashns/a28d237d268a5a29dd29971934ba3fdb/raw/bc12f960b846bfe6498a519c7e8088456d11e820/TextInput.js
+curl -o TextInput.css https://gist.githubusercontent.com/aakashns/592507e87a88e722914baa5a6112d3bc/raw/0e8e30529e8d64399fe9bea1cd2be68f3337cbb0/TextInput.css
+curl -o index.js https://gist.githubusercontent.com/aakashns/1a96877243fb2f78b904ea33e84dca42/raw/8cc3477c295d54bcc91bf205066934cbe6dead77/index.js
+cd ../..
+
+# Modify package.json
+rm package.json
+curl -o package.json https://gist.githubusercontent.com/aakashns/6a405588a1b25e15a78e92d797919895/raw/60c59b3d18f636b850071a252b2e6589f8d752df/package.json
+sed -i '' "2s/simple-component-library/$1/" package.json
+npm i react react-dom react-scripts babel-cli rimraf --save-dev
+
+# Set up transpilation
+echo '{ "presets": ["react-app"] }' > .babelrc 
+
+# Set up linting
+echo '{ "extends": "react-app" }' > .eslintrc
+
+# Rewite the README
+echo "# $1" > README.md
