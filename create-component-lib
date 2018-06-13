@@ -24,7 +24,7 @@ mkdir lib
 cd lib
 curl -o TextInput.js https://gist.githubusercontent.com/aakashns/a28d237d268a5a29dd29971934ba3fdb/raw/bc12f960b846bfe6498a519c7e8088456d11e820/TextInput.js
 curl -o TextInput.css https://gist.githubusercontent.com/aakashns/592507e87a88e722914baa5a6112d3bc/raw/0e8e30529e8d64399fe9bea1cd2be68f3337cbb0/TextInput.css
-curl -o index.js https://gist.githubusercontent.com/aakashns/1a96877243fb2f78b904ea33e84dca42/raw/8cc3477c295d54bcc91bf205066934cbe6dead77/index.js
+curl -o index.js https://gist.githubusercontent.com/aakashns/1a96877243fb2f78b904ea33e84dca42/raw/d6dc98ee1abb90c145304770634242663c517fbb/index.js
 cd ../..
 
 # Modify package.json
