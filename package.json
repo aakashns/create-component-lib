@@ -1,11 +1,7 @@
 {
   "name": "create-component-lib",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create a library of React components that can be published to npm",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aakashns/create-component-lib.git"
@@ -19,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aakashns/create-component-lib/issues"
   },
-  "homepage": "https://github.com/aakashns/create-component-lib#readme"
+  "homepage": "https://github.com/aakashns/create-component-lib#readme",
+  "bin": {
+    "create-component-lib": "./create-component-lib"
+  }
 }
