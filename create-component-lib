@@ -31,10 +31,10 @@ cd ../..
 rm package.json
 curl -o package.json https://gist.githubusercontent.com/aakashns/6a405588a1b25e15a78e92d797919895/raw/60c59b3d18f636b850071a252b2e6589f8d752df/package.json
 sed -i '' "2s/simple-component-library/$1/" package.json
-npm i react react-dom react-scripts babel-cli rimraf --save-dev
+npm i react react-dom react-scripts babel-cli babel-preset-react-app rimraf --save-dev
 
 # Set up transpilation
-echo '{ "presets": ["react-app"] }' > .babelrc 
+echo '{ "presets": [["react-app", { "absoluteRuntime": false }]] }' > .babelrc 
 
 # Set up linting
 echo '{ "extends": "react-app" }' > .eslintrc
